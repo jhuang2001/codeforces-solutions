@@ -88,7 +88,7 @@ int dist(int a, int b, int prev){
 int main(){
     FAST
     int T; cin>>T;
-    F(CASE,0,T){
+    FE(CASE,1,T){
         bool ans = false;
         
         int n, a, b, da, db;

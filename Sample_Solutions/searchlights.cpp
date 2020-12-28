@@ -49,6 +49,7 @@ int siz[20];
 
 int find(int i){
     if(g[i]!=g[g[i]])g[i] = find(g[i]);
+    
     return g[i];
 }
 

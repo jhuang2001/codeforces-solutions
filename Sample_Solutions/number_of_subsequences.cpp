@@ -50,6 +50,7 @@ int main(){
     
     int MOD = 1000000007;
     int n; cin>>n; cin.ignore(999,'\n');
+    
     string s; getline(cin, s);
     
     long long a = 0, b = 0, c = 0;

@@ -52,7 +52,6 @@ int main(){
     
     int l = 0;
     set<int> f1,f2,l1,l2;
-    
     F(i,0,n){
         int a,b;
         cin>>a>>b;

@@ -43,6 +43,7 @@ typedef pair<ll,ll> pll;
 int main(){
     FAST
     int T; cin>>T;
+    
     while(T--){
         int n; cin>>n;
         vi a; a.resize(n);

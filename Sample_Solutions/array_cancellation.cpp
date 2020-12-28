@@ -40,6 +40,7 @@ typedef pair<int,int> pii;
 
 int main(){
     int T; cin>>T;
+    
     while(T--){
         int n; cin>>n;
         ll bank = 0; ll ans = 0;

@@ -63,6 +63,7 @@ int main(){
     FAST
     
     int T; cin>>T;
+    
     while(T-- ){
         int n; cin>>n;
         string A, B;

@@ -45,6 +45,7 @@ typedef pair<ll,ll> pll;
 int main(){
     FAST
     int n; cin>>n;
+    
     vi g; g.resize(n+1);
     stack<int> st;
     FE(i,1,n)st.push(i);

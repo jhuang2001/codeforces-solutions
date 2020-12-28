@@ -59,6 +59,7 @@ void dfs(int curr, int prev){
 int main(){
     FAST
     int T; cin>>T;
+    
     while(T--){
         int n; cin>>n;
         

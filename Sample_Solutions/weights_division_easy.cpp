@@ -76,6 +76,7 @@ int main(){
     cout.tie(0);
     
     int T; cin>>T;
+    
     while(T--){
         int n; ll s;
         cin>>n>>s;

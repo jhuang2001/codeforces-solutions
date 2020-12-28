@@ -54,6 +54,7 @@ ll tens(int n){
 
 int main(){
     int T; cin>>T;
+    
     while(T--){
         ll n; int s; cin>>n>>s;
         

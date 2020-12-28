@@ -40,6 +40,7 @@ typedef pair<int,int> pii;
 
 int main(){
     int T; cin>>T;
+    
     F(CASE,0,T){
         int n, k;
         cin>>n>>k;

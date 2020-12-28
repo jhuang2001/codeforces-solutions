@@ -64,6 +64,7 @@ int main(){
         }
         
         bool doable = false;
+        
         F(i,0,n){
             bool center = true;
             F(j,0,n){

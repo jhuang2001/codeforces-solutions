@@ -51,7 +51,7 @@ int main(){
     int T; cin>>T;
     cin.ignore(1000,'\n');
     
-    F(CASE,0,T){
+    FE(CASE,1,T){
         vector<vector<char>> d;
         int n; cin>>n;
         cin.ignore(1000,'\n');

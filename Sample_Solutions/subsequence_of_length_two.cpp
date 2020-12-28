@@ -49,6 +49,7 @@ int main(){
     FAST
     int N,K;
     cin>>N>>K;
+    
     string s, t;
     cin>>s>>t;
     
