@@ -1,5 +1,4 @@
-#README
+### README
 
-Macros used for competetive programming
-
-Skeleton designed for CodeForces
+main.cpp contains macros/skeleton used for competetive programming <br />
+Sample Solutions contains solutions to various CodeForces problems
