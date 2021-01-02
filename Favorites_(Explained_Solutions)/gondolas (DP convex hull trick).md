@@ -36,7 +36,7 @@ b = DP[j][k-1] <br />
 
 We can store the minimum of all these lines in a **deque** of lines (DQ) and the pre[i] at which they start being optimal <br />
 DQ will have the following properties:
-* The elements back of the queue will be optimal for pre[i] larger than those at the front
+* The elements at the back of the queue will be optimal for pre[i] larger than those at the front
 * By geometric properties: elements in the front of the queue must have slopes greater than those at the back
     * We can see this by drawing two arbitrary lines with different slope: <br />
       Clearly, the minimum value of these two lines before they intersect belongs to the line with greater slope <br />
