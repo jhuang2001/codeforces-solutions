@@ -50,7 +50,7 @@ DQ will have the following properties:
 * Again, since our DP is constructed backwards, our queries for x (pre[i]) are non-increasing:
     * Thus we can always look at the back of DQ to get our optimal line.
     * If the next line at the back of the DQ is valid (pre[i] \<= DQ.back.valid_point), we can remove the last line from the DQ since this next line will be better than it for all x\<pre[i].
-* Finally, note that maintaining DQ takes at most 2*(2T) deque operations since the line corresponding to each point is added/removes at most once.
+* Finally, note that maintaining DQ takes at most 2*(2T) deque operations since the line corresponding to each point is added/removed at most once.
 * Also, on average querying DQ to find the min(DP[j][k-1] - j\*pre[i]) is O(1).
 
 Using this structure we can compute DP[i,k] in O(1) time. <br />
