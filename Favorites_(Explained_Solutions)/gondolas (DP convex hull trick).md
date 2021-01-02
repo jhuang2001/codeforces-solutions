@@ -9,16 +9,16 @@ Problem statement: https://open.kattis.com/problems/gondolas
 * A skier arriving at time ***t*** is equivalent to one arriving at ***t***+2***T*** since the gondolas cycle every 2***T*** minutes. <br />
 Thus we can track each skiers arrival time mod 2***T***.
 * This problem is solvable using DP where our DP state is the following: <br />
-  * DP[i,k] = The optimal wait time for ***j*** gondolas and the leftmost gondola arrives at time ***i***
+  * DP[i,k] = The optimal wait time for ***k*** gondolas and the leftmost gondola arrives at time ***i***
   * Base case: assume that one gondola is places at the end of the cycle, 2***T***-1 <br />
   (note that we must iterate over all possible placements for the last gondola)
   * Notice that placing a gondola at time ***g***\<***i*** saves pre(***g***)\*(***g***-***i***)
     * pre(***g***) is the number of arrivals before or at time ***g***.
-    * We can see this since, before adding ***g***, i was the earliest gondola =>
-    all pre(g) skiers must will save (***i***-***g***) minutes
+    * We can see this since, before adding ***g***, ***i*** was the earliest gondola =>
+    all pre(***g***) skiers must will save (***i***-***g***) minutes
   * Therefore, DP[i,k] = min{DP[j,k-1]-pre(i)\*(j-i)}, for all j>=i
 
-* Problem: Naively implementing this DP takes O(TNK) and since we must check N final postions (we can easily prune the last position since it must be on a gondola), the total runtime of this algorithm is O(TKN^2) => TLE.
+* Problem: Naively implementing this DP takes O(TNG) and since we must check N final postions (we can easily prune the last position since it must be on a gondola), the total runtime of this algorithm is O(TGN^2) => TLE.
 * We can reduce this to O(TKN) using the Convex Hull Trick
 
 ## CHT (Convex Hull Trick) DP optimization
@@ -67,3 +67,5 @@ DP[i,k] = pre[i]\*i + min(DP[j,k-1] - j\*pre[i]) <br />
 
 Finally, the answer will just be the minimum of DP[i,G] for all 0\<=i\<2*T <br />
 Where G is the number of gondolas availabe
+
+The total solution runs in O(TNG)
