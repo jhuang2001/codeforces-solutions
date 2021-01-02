@@ -19,10 +19,10 @@ Thus we can track each skiers arrival time mod 2***T***.
   * Therefore, DP[i,k] = min{DP[j,k-1]-pre(i)\*(j-i)}, for all j>=i
 
 * Problem: Naively implementing this DP takes O(TNG) and since we must check N final postions (we can easily prune the last position since it must be on a gondola), the total runtime of this algorithm is O(TGN^2) => TLE.
-* We can reduce this to O(TKN) using the Convex Hull Trick
+* We can reduce this to O(TGN) using the Convex Hull Trick
 
 ## CHT (Convex Hull Trick) DP optimization
-First note the equation: <br />
+First observe the equation: <br />
 DP[i,k] = min(DP[j,k-1] - pre[i]\*(j-i)), for j>=i
 
 Rewrite as <br />
