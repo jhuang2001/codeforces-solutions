@@ -56,7 +56,9 @@ DQ will have the following properties:
 Using this structure we can compute DP[i,k] in O(1) time. <br />
 Let: <br />
 m = slope of optimal line (note that the slope of a line is -j) <br />
-b = y-intercept of optimal line (note that this is DP[j,k-1])
+b = y-intercept of optimal line (note that this is DP[j,k-1]) <br />
+
+Also, recall that the optimal line is min(m\*pre[i] + b) for the current pre[i].
 
 Then we can calculate DP[i,k]: <br />
 DP[i,k] = pre[i]\*i + min(DP[j,k-1] - j\*pre[i]) <br />
