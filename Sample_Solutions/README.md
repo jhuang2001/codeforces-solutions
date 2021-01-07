@@ -1,5 +1,3 @@
 #README
 
-Macros used for competetive programming
-
-Problems from CodeForces
+Problems from CodeForces, problem names are the same as the file name (without .cpp extension)
