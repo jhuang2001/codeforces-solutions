@@ -23,7 +23,7 @@ Problem Statement (From NWERC 2019): https://codeforces.com/gym/102500/problem/A
     * (Prefix[Points] - Old_Prefix[Points]) <br />
     Where Prefix[Points] is the current prefix sum of the person's point value <br />
     and Old_Prefix[Points] is the prefix sum of the person's point value when they last updated
-  * Finally, we can "pre-emptively" subtract **Old_Prefix** when we do the update a person's rank sum so that we can do all the operations in a single linear pass. That is, we will subtrace Prefix[Points + 1] instead of "Old_Prefix" at each update, since Prefix[Points + 1] is the Old_prefix of the next update.
+  * Finally, we can "pre-emptively" subtract **Old_Prefix** when we do the update a person's rank sum so that we can do all the operations in a single linear pass. That is, we will subtract Prefix[Points + 1] instead of "Old_Prefix" at each update, since Prefix[Points + 1] is the Old_prefix of the next update.
 ## Putting it all together
 * when a person gains a point, we do the following:
   * let **P** be the number of points that person has
