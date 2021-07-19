@@ -12,7 +12,7 @@ Problem Statement (From NWERC 2019): https://codeforces.com/gym/102500/problem/A
 * Problem: this solution is too slow as it has a time complexity of **O(NW)**
 ### Trick
 * take advantage of the prefix sum's linear growth to only update the psum when needed
-  * Consider a person whose rank does not change in **w** weeks -- after **w** weeks, he his "rank sum" will simply increase by (**w** * rank).
+  * Consider a person whose rank does not change in **w** weeks -- after **w** weeks, his "rank sum" will simply increase by (**w** * rank).
   * Thus we only need to update this person's rank sum when his rank changes, which can only happen in one of the cases highlighted in **Key Observations**.
     * Note: The problem statement offers a large hint to this as it states: <br /> 
     "***The total number of points awarded is at most 1 million.***"
@@ -22,8 +22,8 @@ Problem Statement (From NWERC 2019): https://codeforces.com/gym/102500/problem/A
   * The person would add the following to their sum on an update:
     * (Prefix[Points] - Old_Prefix[Points]) <br />
     Where Prefix[Points] is the current prefix sum of the person's point value <br />
-    and Old_Prefix[Points] is the prefix sum if the person's point value when they last updated
-  * Finally, we can "pre-emptively" subtract **Old_Prefix** when we do the update a person's rank sum so that we can do all the operations in a single linear pass.
+    and Old_Prefix[Points] is the prefix sum of the person's point value when they last updated
+  * Finally, we can "pre-emptively" subtract **Old_Prefix** when we do the update a person's rank sum so that we can do all the operations in a single linear pass. That is, we will subtrace Prefix[Points + 1] instead of "Old_Prefix" at each update, since Prefix[Points + 1] is the Old_prefix of the next update.
 ## Putting it all together
 * when a person gains a point, we do the following:
   * let **P** be the number of points that person has
